@@ -6,6 +6,44 @@ html {
   scroll-behavior: smooth;
 }
 
+.scrollHelper {
+  /* make a triangle reversed*/
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid white;
+  /* make it empty inside */
+  z-index: 1000;
+}
+
+.minitriangle {
+  /* make a triangle reversed*/
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.return {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #fff;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  animation: slideUp 1s;
+
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -29,7 +67,7 @@ html {
 
 main {
   height: 100vh;
-  background-color: #E5D4FF;
+  background-color: #000000;
 }
 
 ::-webkit-scrollbar {
@@ -149,9 +187,25 @@ main {
   height: 100vh;
 }
 
+.project_card {
+  background: url(/humanity.png) no-repeat center center;
+  background-size: 100% 100%;
+  transition: background-size 0.5s ease-in-out 0.2s;
+}
+
+@media (max-width: 768px) {
+  .project_card {
+    width: 100% !important;
+  }
+}
+
+.project_card:hover {
+  background-size: 125% 125%;
+}
+
 .first-section {
-  height: calc(100vh - 80px);
-  background-color: #E5D4FF;
+  height: calc(100vh - 79px);
+  background-color: #000000;
 }
 
 .first-sectionn {

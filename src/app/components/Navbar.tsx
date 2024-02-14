@@ -33,11 +33,12 @@ function Navbar({ }: INavbar) {
     item: {
       cursor: 'pointer',
       transition: 'color 0.3s ease',
+      userSelect: 'none',
       "@media(max-width: 768px)": {
         padding: '10px 20px',
         textAlign: 'center',
         '&:hover': {
-          background: theme.colors.grape[1],
+          background: "black",
           transition: 'background 0.6s ease',
         }
       },
@@ -61,21 +62,21 @@ function Navbar({ }: INavbar) {
       "@media(max-width: 768px)": {
         position: 'absolute',
         width: '100%',
-        background: '#fff',
-        margin: '20px 0 0 -25px',
+        background: "black",
+        margin: '10px 0 0 -24px',
         flexDirection: 'column',
       }
     },
     logo: {
       textAlign: 'center',
       padding: '10px 20px',
-      border: '2px dashed #3023AE',
+      border: '1.5px dashed #fff',
       userSelect: 'none'
     },
     hamburgerLeft: {
       width: 30,
       height: 2,
-      backgroundColor: "#000",
+      backgroundColor: "white",
       marginBottom: 5,
       transform: open ? 'rotate(45deg) translate(5.7px, -1px)' : 'none',
       transition: 'transform 0.3s ease-in-out',
@@ -83,7 +84,7 @@ function Navbar({ }: INavbar) {
     hamburgerMiddle: {
       width: 30,
       height: 2,
-      backgroundColor: "#000",
+      backgroundColor: "white",
       marginBottom: 5,
       display: open ? 'none' : 'block',
       transition: 'display 0.3s ease-in-out',
@@ -91,7 +92,7 @@ function Navbar({ }: INavbar) {
     hamburgerRight: {
       width: 30,
       height: 2,
-      backgroundColor: "#000",
+      backgroundColor: "white",
       marginBottom: 5,
       transform: open ? 'rotate(-45deg) translate(5.7px, 0px)' : 'none',
       transition: 'transform 0.3s ease-in-out',
@@ -104,15 +105,15 @@ function Navbar({ }: INavbar) {
     <nav className={classes.navbar}>
       <div className={classes.wrapper}>
         <div className={classes.logoContainer}>
-          <Text fw={750} fz={20} italic className={classes.logo}>LOGO</Text>
+          <Text fw={750} fz={20} color="white" italic className={classes.logo}>LOGO</Text>
         </div>
         {
           width > 768 ? (
             <ul className={classes.navList}>
-              <Text component="li" className={classes.item} fw={500} fz={16}>Inicio</Text>
-              <Text component="li" className={classes.item} fw={500} fz={16}>Sobre mí</Text>
-              <Text component="li" className={classes.item} fw={500} fz={16}>Proyectos</Text>
-              <Text component="li" className={classes.item} fw={500} fz={16}>Contacta conmigo</Text>
+              <Text component="li" color="white" className={classes.item} fw={500} fz={16}>Inicio</Text>
+              <Text component="li" color="white" className={classes.item} fw={500} fz={16}>Sobre mí</Text>
+              <Text component="li" color="white" className={classes.item} fw={500} fz={16}>Proyectos</Text>
+              <Text component="li" color="white" className={classes.item} fw={500} fz={16}>Contacta conmigo</Text>
             </ul>
           ) : (
             <div className={classes.navbarMenu} onClick={() => setOpen(!open)}>
@@ -126,10 +127,10 @@ function Navbar({ }: INavbar) {
       {
         open && width <= 768 && (
           <ul className={classes.navList}>
-            <Text component="li" className={classes.item} fw={500} fz={16}>Home</Text>
-            <Text component="li" className={classes.item} fw={500} fz={16}>About</Text>
-            <Text component="li" className={classes.item} fw={500} fz={16}>Services</Text>
-            <Text component="li" className={classes.item} fw={500} fz={16}>Contact</Text>
+            <Text component="li" color="white" className={classes.item} fw={500} fz={16}>Home</Text>
+            <Text component="li" color="white" className={classes.item} fw={500} fz={16}>About</Text>
+            <Text component="li" color="white" className={classes.item} fw={500} fz={16}>Services</Text>
+            <Text component="li" color="white" className={classes.item} fw={500} fz={16}>Contact</Text>
           </ul>
         )
       }
